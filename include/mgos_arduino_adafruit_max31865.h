@@ -20,10 +20,10 @@ float mgos_max31865_temperature(Adafruit_MAX31865 *max, float RTDnominal, float 
 
 int _sclk, _miso, _mosi, _cs;
 
-int mgos_max31865_readRegisterN(Adafruit_MAX31865 *max, int addr, int buffer[], int n);
+//int mgos_max31865_readRegisterN(Adafruit_MAX31865 *max, int addr, int buffer[], int n);
 
-int mgos_max31865_readRegister8(Adafruit_MAX31865 *max, int addr);
-int mgos_max31865_readRegister16(Adafruit_MAX31865 *max, int addr);
+//int mgos_max31865_readRegister8(Adafruit_MAX31865 *max, int addr);
+//int mgos_max31865_readRegister16(Adafruit_MAX31865 *max, int addr);
 
 void mgos_max31865_writeRegister8(Adafruit_MAX31865 *max, int addr, int data);
 int mgos_max31865_spixfer(Adafruit_MAX31865 *max, int addr);

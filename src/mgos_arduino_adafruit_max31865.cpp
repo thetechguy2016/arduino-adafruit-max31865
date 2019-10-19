@@ -11,8 +11,12 @@ Adafruit_MAX31865 *mgos_init_max31865(int spi_cs){
 }
 
 bool mgos_max31865_begin(Adafruit_MAX31865 *max, int x = 0){
-    if (ssd == nullptr) return;
-    return max->begin(x);
+    if (max == nullptr) return false;
+    if(x == 0) {
+        return max->begin(MAX31865_2WIRE);
+    }else{
+        return max->begin(MAX31865_3WIRE);
+    }
 }
 
 int mgos_max31865_readFault(Adafruit_MAX31865 *max) {
@@ -26,7 +30,11 @@ int mgos_max31865_readRTD(Adafruit_MAX31865 *max){
 }
 
 void mgos_max31865_setWires(Adafruit_MAX31865 *max, int wires){
-    max->setWires(wires);
+    if(wires == 0) {
+        max->setWires(MAX31865_2WIRE);
+    }else{
+        max->setWires(MAX31865_3WIRE);
+    }
 }
 void mgos_max31865_autoConvert(Adafruit_MAX31865 *max, boolean b){
     max->autoConvert(b);
@@ -40,20 +48,20 @@ double mgos_max31865_temperature(Adafruit_MAX31865 *max, double RTDnominal, doub
 }
 
 
-int mgos_max31865_readRegisterN(Adafruit_MAX31865 *max, int addr, void *buffer, int n){
+/*int mgos_max31865_readRegisterN(Adafruit_MAX31865 *max, int addr, void *buffer, int n){
     max->readRegisterN(addr, buffer, n);
-}
+}*/
 
-int mgos_max31865_readRegister8(Adafruit_MAX31865 *max, int addr){
+/*int mgos_max31865_readRegister8(Adafruit_MAX31865 *max, int addr){
     return max->readRegister8(addr);
 }
 int mgos_max31865_readRegister16(Adafruit_MAX31865 *max, int addr){
     return max->readRegister16(addr);
-}
+}*/
 
 void mgos_max31865_writeRegister8(Adafruit_MAX31865 *max, int addr, int data){
     max->writeRegister8(addr, data);
 }
 int mgos_max31865_spixfer(Adafruit_MAX31865 *max, int addr){
-    max->spixfer(addr);
+    return max->spixfer(addr);
 }
