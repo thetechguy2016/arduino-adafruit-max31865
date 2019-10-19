@@ -1,6 +1,6 @@
 let MAX31865 = {
     _imax: ffi('void *mgos_init_max31865(int, int, int, int)'),
-    _imaxs: ffi('void *mgos_init_max31865(int)'),
+    _imaxd: ffi('void *mgos_init_max31865_default(int)'),
     _begin: ffi('int mgos_max31865_begin(void *, int)'),
     _rf: ffi('int mgos_max31865_readFault(void *)'),
     _cf: ffi('void mgos_max31865_clearFault(void *)'),

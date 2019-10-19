@@ -6,7 +6,7 @@ Adafruit_MAX31865 *mgos_init_max31865(int spi_cs, int spi_mosi, int spi_miso, in
     return new Adafruit_MAX31865(spi_cs, spi_mosi, spi_miso, spi_clk);
 }
 
-Adafruit_MAX31865 *mgos_init_max31865(int spi_cs){
+Adafruit_MAX31865 *mgos_init_max31865_default(int spi_cs){
     return new Adafruit_MAX31865(spi_cs);
 }
 

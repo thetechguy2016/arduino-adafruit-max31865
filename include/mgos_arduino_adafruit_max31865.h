@@ -4,7 +4,7 @@
 #include "Adafruit_MAX31865.h"
 
 Adafruit_MAX31865 *mgos_init_max31865(int spi_cs, int spi_mosi, int spi_miso, int spi_clk);
-Adafruit_MAX31865 *mgos_init_max31865(int spi_cs);
+Adafruit_MAX31865 *mgos_init_max31865_default(int spi_cs);
 
 bool mgos_max31865_begin(Adafruit_MAX31865 *max, int x);
 
