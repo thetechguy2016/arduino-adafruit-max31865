@@ -48,14 +48,14 @@ boolean Adafruit_MAX31865::begin(max31865_numwires_t wires) {
 
   if (_sclk != -1) {
     //define pin modes
-    pinMode(_sclk, OUTPUT); 
+    pinMode(_sclk, OUTPUT);
     digitalWrite(_sclk, LOW);
-    pinMode(_mosi, OUTPUT); 
+    pinMode(_mosi, OUTPUT);
     pinMode(_miso, INPUT);
   } else {
     //start and configure hardware SPI
     SPI.begin();
-  }  
+  }
 
   for (uint8_t i=0; i<16; i++) {
     // readRegister8(i);
