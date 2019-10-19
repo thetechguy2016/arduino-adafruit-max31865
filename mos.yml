@@ -1,7 +1,7 @@
 type: lib
 description: Arduino Adafruit library for max31865 to mongoose
 version: 1.0
-platform: esp32
+
 sources:
   - src
 includes:
