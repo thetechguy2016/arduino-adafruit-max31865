@@ -113,7 +113,7 @@ void Adafruit_MAX31865::setWires(max31865_numwires_t wires ) {
   writeRegister8(MAX31856_CONFIG_REG, t);
 }
 
-float  Adafruit_MAX31865::temperature(float RTDnominal, float refResistor) {
+double  Adafruit_MAX31865::temperature(double RTDnominal, double refResistor) {
   // http://www.analog.com/media/en/technical-documentation/application-notes/AN709_0.pdf
 
   float Z1, Z2, Z3, Z4, Rt, temp;
@@ -159,7 +159,7 @@ uint16_t Adafruit_MAX31865::readRTD (void) {
   enableBias(true);
   delay(10);
   uint8_t t = readRegister8(MAX31856_CONFIG_REG);
-  t |= MAX31856_CONFIG_1SHOT;      
+  t |= MAX31856_CONFIG_1SHOT;
   writeRegister8(MAX31856_CONFIG_REG, t);
   delay(65);
 

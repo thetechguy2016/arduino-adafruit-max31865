@@ -77,7 +77,7 @@ class Adafruit_MAX31865 {
   void autoConvert(boolean b);
   void enableBias(boolean b);
 
-  float temperature(float RTDnominal, float refResistor);
+  double temperature(double RTDnominal, double refResistor);
   int8_t _sclk, _miso, _mosi, _cs;
 
   void readRegisterN(uint8_t addr, uint8_t buffer[], uint8_t n);
