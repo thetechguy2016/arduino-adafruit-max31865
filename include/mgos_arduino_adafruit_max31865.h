@@ -3,6 +3,10 @@
 
 #include "Adafruit_MAX31865.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 Adafruit_MAX31865 *mgos_init_max31865(int spi_cs, int spi_mosi, int spi_miso, int spi_clk);
 Adafruit_MAX31865 *mgos_init_max31865_default(int spi_cs);
 
@@ -27,5 +31,9 @@ int _sclk, _miso, _mosi, _cs;
 
 void mgos_max31865_writeRegister8(Adafruit_MAX31865 *max, int addr, int data);
 int mgos_max31865_spixfer(Adafruit_MAX31865 *max, int addr);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
