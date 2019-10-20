@@ -15,9 +15,9 @@ let MAX31865 = {
         obj.max = MAX31865._imax(cs, mosi, miso, clk);
         return obj;
     },
-    MAX31865_2WIRE = 0,
-    MAX31865_3WIRE = 1,
-    MAX31865_4WIRE = 0,
+    MAX31865_2WIRE : 0,
+    MAX31865_3WIRE : 1,
+    MAX31865_4WIRE : 0,
     _proto: {
         begin: function(wire){
             return MAX31865._begin(this.max, wire);
