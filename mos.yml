@@ -1,14 +1,15 @@
+auther: Vipul Garg
 type: lib
 description: Arduino Adafruit library for max31865 to mongoose
-version: 1.0
+version: 2.0
 
 sources:
   - src
 includes:
   - include
-
 libs:
   - origin: https://github.com/mongoose-os-libs/arduino-compat
+  - origin: https://github.com/mongoose-os-libs/arduino-wire
   - origin: https://github.com/mongoose-os-libs/arduino-spi
 
 tags:
