@@ -5,9 +5,9 @@ let MAX31865 = {
     _rf: ffi('int mgos_max31865_readFault(void *)'),
     _cf: ffi('void mgos_max31865_clearFault(void *)'),
     _rrtd: ffi('int mgos_max31865_readRTD(void *)'),
-    _setW: ffi('void mgos_max31865_setWires(void *, int wires)'),
-    _autoC: ffi('void mgos_max31865_autoConvert(void *, int b)'),
-    _enableB: ffi('void mgos_max31865_enableBias(void *, int b)'),
+    _setW: ffi('void mgos_max31865_setWires(void *, int)'),
+    _autoC: ffi('void mgos_max31865_autoConvert(void *, int)'),
+    _enableB: ffi('void mgos_max31865_enableBias(void *, int)'),
     _temprature: ffi('double mgos_max31865_temperature(void *, double, double)'),
     
     init: function(cs, mosi, miso, clk) {
