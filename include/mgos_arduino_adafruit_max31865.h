@@ -20,7 +20,7 @@ void mgos_max31865_setWires(Adafruit_MAX31865 *max, int wires);
 void mgos_max31865_autoConvert(Adafruit_MAX31865 *max, boolean b);
 void mgos_max31865_enableBias(Adafruit_MAX31865 *max, boolean b);
 
-float mgos_max31865_temperature(Adafruit_MAX31865 *max, float RTDnominal, float refResistor);
+double mgos_max31865_temperature(Adafruit_MAX31865 *max, double RTDnominal, double refResistor);
 
 int _sclk, _miso, _mosi, _cs;
 

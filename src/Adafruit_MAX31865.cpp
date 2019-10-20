@@ -113,7 +113,7 @@ void Adafruit_MAX31865::setWires(max31865_numwires_t wires ) {
   writeRegister8(MAX31856_CONFIG_REG, t);
 }
 
-double  Adafruit_MAX31865::temperature(double RTDnominal, double refResistor) {
+double Adafruit_MAX31865::temperature(double RTDnominal, double refResistor) {
   // http://www.analog.com/media/en/technical-documentation/application-notes/AN709_0.pdf
 
   double Z1, Z2, Z3, Z4, Rt, temp;
